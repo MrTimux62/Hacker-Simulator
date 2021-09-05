@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Déclaration du début d'un document html -->
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hacker Simulator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Titre de la page dans l'onglet navigateur -->
+	<meta name="Author" content="Boulanger Tim">
+	<meta name="keywords" lang="fr" content="HTML">
+	<link rel="icon" href="hacker_sim.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Press+Start+2P&display=swap"
+		rel="stylesheet">
+	<link href="CSS/bootstrap.min.css" rel='stylesheet'>
+	<link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+
+	<p id="start" class="centered text-light"></p>
+	<p id="start2" class="centered2 text-light fs-4">Tape les lettres avec ton clavier</p>
+	<div id="Container" style="opacity: 0; width: 100%; height: 100%;">
+		<p id="Money" style="position: absolute; left: 1%; top: 1%; color: white; font-size: 120%;">Argent : 50€</p>
+		<div id="window" class="bg-light mx-5 mt-5 mb-5" style="height: 97%; border-radius: 3%;">
+			<div class="px-5" style="position: absolute; top: 7%; left: 2%; width: 97%; display: table;">
+				<p id="computerText1" class="computerText text-dark mx-auto" style="vertical-align: middle; display: table-row;"></p>
+				<br>
+				<p id="computerText2" class="computerText text-dark mx-auto" style="vertical-align: middle; display: table-row;"></p>
+				<br>
+				<p id="computerText3" class="computerText text-dark mx-auto" style="vertical-align: middle; display: table-row;"></p>
+				<br>
+				<p id="computerText4" class="computerText text-dark mx-auto" style="vertical-align: middle; display: table-row;"></p>
+				<br>
+				<p id="computerText5" class="computerText text-dark mx-auto" style="vertical-align: middle; display: table-row;"></p>
+			</div>
+			<span class="px-5" style="position: absolute; bottom: 7%; left: 2%; width: 97%; height: 5%; display: table; background-color: black;">
+				<p id="playerText" class="text-light mx-auto" style="vertical-align: middle; display: table-cell;"></p>
+			</span>
+		</div>
+	</div>
+	<script src="JS/jquery-3.6.0.min.js"></script>
+	<script src='JS/bootstrap.bundle.js'></script>
+	<script src="JS/action.js"></script>
+</body>
+
+</html>

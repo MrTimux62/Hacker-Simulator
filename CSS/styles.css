@@ -1,0 +1,38 @@
+* {
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.centered {
+    position: fixed;
+    /* or absolute */
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.centered2 {
+    position: fixed;
+    /* or absolute */
+    top: 56%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+html, body {
+    background-color: black;
+    height: 97%;
+}
+
+#start {
+    font-size: 500%;
+}
+
+.computerText {
+    font-size: 150%;
+}
+
+#playerText {
+    font-size: 150%;
+}
