@@ -3,6 +3,9 @@ let nbletter = 0;
 let phase = 1;
 let finish = 0;
 
+/**
+ * Démarrage
+ */
 function start() {
     $("#start").remove()
     $(function () {
@@ -10,7 +13,7 @@ function start() {
     });
     setTimeout(() => {
         TapeWord("#playerText", "Hey")
-    }, 3000);
+    }, 2000);
 }
 
 /**
@@ -80,6 +83,7 @@ $(document).keypress(function (event) {
     let playerTextID = "#" + replaceWord + "_lettre_" + nbletter;
     if ($("#playerText").text().substr(nbletter, 1).toLowerCase().charCodeAt(0) < 96) { // Si la lettre est un espace passer a la suivant
         nbletter++;
+        keysound()
         if ($("#playerText").text().substr(nbletter, 1).toLowerCase().charCodeAt(0) < 96) { // Si les deux prochaines lettres ne font pas partie de l'alphabet le mot est finit
             finish = 1;
         }
@@ -112,7 +116,7 @@ function changePhase() {
             }, 3000);
             setTimeout(() => {
                 TapeWord("#playerText", "De quoi a tu besoin ?");
-            }, 20000);
+            }, 12000);
             break;
         case 3:
             WriteText("Moi -> De quoi a tu besoin ?")
@@ -121,7 +125,7 @@ function changePhase() {
             }, 5000);
             setTimeout(() => {
                 TapeWord("#playerText", "Qu'est ce que j'y gagne ?");
-            }, 25000);
+            }, 15000);
             break;
         case 4:
             WriteText("Moi -> Qu'est ce que j'y gagne ?")
@@ -130,13 +134,13 @@ function changePhase() {
             }, 5000);
             setTimeout(() => {
                 TapeWord("#playerText", "Ok pour moi !");
-            }, 20000);
+            }, 11000);
             break;
         case 5:
             WriteText("Moi -> Ok pour moi !")
             setTimeout(() => {
                 WriteText("Ordinateur -> Alors c'est partie ! je t'envoie les données de notre première victime ! Mouahahahah !")
-            }, 5000);
+            }, 3000);
             break;
         default:
             break;
@@ -195,6 +199,10 @@ var showText = function (target, message, index, interval) {
     }
 }
 
+/**
+ * Ecrire un texte dans la console
+ * @param {*} text 
+ */
 function WriteText(text) {
     for (let index = 1; index < 7; index++) {
         if (index == 6) {
@@ -202,11 +210,11 @@ function WriteText(text) {
                 $("#computerText" + index2).text($("#computerText" + (index2 + 1)).text())
             }
             $("#computerText5").text("");
-            showText("#computerText5", text, 0, 100);
+            showText("#computerText5", text, 0, 50);
             break;
         }
         if ($("#computerText" + index).text().length <= 1) {
-            showText("#computerText" + index, text, 0, 100);
+            showText("#computerText" + index, text, 0, 50);
             break;
         }
     }
