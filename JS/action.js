@@ -86,6 +86,8 @@ $(document).keypress(function (event) {
         keysound()
         if ($("#playerText").text().substr(nbletter, 1).toLowerCase().charCodeAt(0) < 96) { // Si les deux prochaines lettres ne font pas partie de l'alphabet le mot est finit
             finish = 1;
+            playerTextID = "#" + replaceWord + "_lettre_" + nbletter;
+            $(playerTextID).css("color", "green");
         }
     }
     if ($(playerTextID).attr("class") == keycode || finish == 1) { // Le bonne lettre est rentrée
