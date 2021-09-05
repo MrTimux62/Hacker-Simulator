@@ -9,7 +9,7 @@ let finish = 0;
 function start() {
     $("#start").remove()
     $(function () {
-        WriteText("Ordinateur -> Bienvenue à toi !")
+        WriteText("Ordinateur -> Bienvenue à toi ! ( Tu peut me parler en saisissant les mots en bas de l'écran )")
     });
     setTimeout(() => {
         TapeWord("#playerText", "Hey")
